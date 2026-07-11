@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Radio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app">
+
+  <div class="now-playing">
+    <div class="label">Now Playing</div>
+    <div class="station-info">
+      <div class="station-logo" id="np-logo">
+        <svg class="logo-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+        </svg>
+        <img id="np-logo-img" src="" alt="" />
+      </div>
+      <div class="station-meta">
+        <div class="station-name" id="np-name">Select a station</div>
+        <div class="station-country" id="np-country">—</div>
+      </div>
+      <div class="live-badge" id="live-badge">
+        <div class="live-dot"></div> Live
+      </div>
+    </div>
+    <div class="controls">
+      <button class="btn-play" id="btn-play" onclick="togglePlay()">
+        <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+      </button>
+      <div class="volume-wrap">
+        <svg class="volume-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+        </svg>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8" oninput="setVolume(this.value)" />
+      </div>
+    </div>
+  </div>
+
+  <div class="favorites">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('browse', this)">Browse</button>
+      <button class="tab" onclick="switchTab('favorites', this)">Favorites</button>
+    </div>
+    <input class="search-input" type="text" id="search" placeholder="Search stations..." oninput="filterStations()" />
+    <div class="station-list" id="station-list">
+      <div class="loading-state" id="loading">Loading stations...</div>
+    </div>
+    <div class="empty-state" id="empty-state">No stations found.</div>
+  </div>
+</div>
+
+<audio id="audio-player"></audio>
+<script src="app.js"></script>
+</body>
+</html>
