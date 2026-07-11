@@ -2,7 +2,7 @@
   "name": "Radio Player",
   "short_name": "Radio",
   "description": "Stream online radio stations with favorites support.",
-  "start_url": "/index.html",
+  "start_url": "/ADB-Radio-Streamer/index.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0e0e0e",
