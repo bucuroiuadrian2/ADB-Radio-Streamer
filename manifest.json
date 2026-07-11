@@ -66,21 +66,21 @@
       "short_name": "Deep",
       "description": "Play Vanilla Radio Deep Flavors",
       "url": "/index.html?play=vanilla-deep",
-      "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+      "icons": [{ "src": "icons/radio-96.png", "sizes": "96x96" }]
     },
     {
       "name": "Smooth Flavors",
       "short_name": "Smooth",
       "description": "Play Vanilla Radio Smooth Flavors",
       "url": "/index.html?play=vanilla-smooth",
-      "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+      "icons": [{ "src": "icons/radio-96.png", "sizes": "96x96" }]
     },
     {
       "name": "Fresh Flavors",
       "short_name": "Fresh",
       "description": "Play Vanilla Radio Fresh Flavors",
       "url": "/index.html?play=vanilla-fresh",
-      "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+      "icons": [{ "src": "icons/radio-96.png", "sizes": "96x96" }]
     }
   ],
   "share_target": {
